@@ -33,7 +33,7 @@ open() {
       #search all entries and extract the last url found and open it
       search ${*:2} | awk -F '|' '{print $1}'
       url=`search ${*:2} | awk -F '|' '{print $1}' | tail -1`
-      if [ -x $url ]
+      if [[ -x $url ]]
 	then
 	  echo no matching url found
 	  exit
@@ -56,7 +56,7 @@ add(){
   tags=${tags,,}
   
   count=$(grep "$url |" "$list" | wc -l)
-  if [ $count -gt 0 ]
+  if [[ $count -gt 0 ]]
     then
     read -p "$url already exists, overwrite? y/N " overwrite
   fi
