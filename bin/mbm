@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # mbm is a bash script CLI bookmark manager
 # Copyright (C) 2015 quentin
